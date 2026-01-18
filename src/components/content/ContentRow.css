@@ -1,0 +1,60 @@
+/* Content Row */
+.content-row {
+  margin-bottom: 3rem;
+}
+
+.row-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.row-container {
+  position: relative;
+}
+
+.row-items {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0;
+}
+
+.row-items::-webkit-scrollbar {
+  display: none;
+}
+
+.row-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 50px;
+  height: 140px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.content-row:hover .row-nav {
+  opacity: 1;
+}
+
+.row-nav:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.row-nav-left {
+  left: 0;
+}
+
+.row-nav-right {
+  right: 0;
+}

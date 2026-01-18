@@ -1,0 +1,7 @@
+/* Content Section */
+.content-section {
+  padding: 0 4%;
+  margin-top: -150px;
+  position: relative;
+  z-index: 10;
+}
