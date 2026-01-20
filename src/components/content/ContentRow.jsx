@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import MovieCard from './MovieCard';
 import './ContentRow.css';
 
-const ContentRow = ({ title, movies }) => {
+const ContentRow = ({ title, movies, onMovieSelect }) => {
   const rowItemsRef = useRef(null);
 
   const scrollLeft = () => {
@@ -30,7 +30,11 @@ const ContentRow = ({ title, movies }) => {
         <button className="row-nav row-nav-left" onClick={scrollLeft}>&lt;</button>
         <div className="row-items" ref={rowItemsRef}>
           {movies.map(movie => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              onMovieSelect={onMovieSelect}
+            />
           ))}
         </div>
         <button className="row-nav row-nav-right" onClick={scrollRight}>&gt;</button>

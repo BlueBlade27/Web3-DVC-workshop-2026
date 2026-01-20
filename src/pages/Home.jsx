@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from '../components/content/Hero';
 import ContentRow from '../components/content/ContentRow';
 import { movieData } from '../data/movieData';
 import './Home.css';
 
+
 const Home = () => {
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  const handleMovieSelect = (movie) => {
+    setSelectedMovie(movie);
+  };
+
   return (
-    <div className="home-page">
+    <div>
       <Hero />
-      <section className="content-section">
-        <ContentRow title="Trending Now" movies={movieData.trending} />
-        <ContentRow title="Popular on Netflix" movies={movieData.popular} />
-        <ContentRow title="Action Movies" movies={movieData.action} />
-        <ContentRow title="Comedy Shows" movies={movieData.comedy} />
-        <ContentRow title="Documentaries" movies={movieData.documentaries} />
+
+      {selectedMovie && (
+        <div>
+          <h2>Selected Movie</h2>
+          <p>{selectedMovie.title}</p>
+        </div>
+      )}
+
+      <section>
+        <ContentRow
+          title="Trending Now"
+          movies={movieData.trending}
+          onMovieSelect={handleMovieSelect}
+        />
+        <ContentRow
+          title="Popular on Netflix"
+          movies={movieData.popular}
+          onMovieSelect={handleMovieSelect}
+        />
       </section>
     </div>
   );

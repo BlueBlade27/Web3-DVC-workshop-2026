@@ -1,19 +1,18 @@
 import React, {userState} from 'react';
 import './MovieCard.css';
 
-const MovieCard = ({ movie }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleClick = () => {
-    console.log('Movie clicked:', movie.id);
-  };
-
+const MovieCard = ({ movie, onMovieSelect }) => {
   return (
-    <div className="movie-card" data-id={movie.id} onClick={handleClick} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <img src={movie.image} alt={movie.title} />
-      <div className="movie-card-info">
-        <div className="movie-card-title">{movie.title}</div>
-      </div>
+    <div
+      style={{ cursor: 'pointer' }}
+      onClick={() => onMovieSelect && onMovieSelect(movie)}
+    >
+      <img 
+        src={movie.image} 
+        alt={movie.title} 
+        style={{ width: '250px', height: '140px', objectFit: 'cover' }} 
+      />
+      <p>{movie.title}</p>
     </div>
   );
 };

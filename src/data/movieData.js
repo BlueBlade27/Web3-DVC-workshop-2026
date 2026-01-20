@@ -1,23 +1,40 @@
+import crownimg from '../images/the_crown.jpg';
+import squidimg from '../images/squid_game.jpg';
+import moneyimg from '../images/money_heist.jpg';
+import wednesdayimg from '../images/wednesday.jpg';
+import witcherimg from '../images/the_witcher.jpg';
+import bridgertonimg from '../images/bridgerton.jpg';
+import ozarkimg from '../images/ozark.jpg';
+import darkimg from '../images/dark.jpg';
+import breakingimg from '../images/breaking_bad.jpg';
+import narcosimg from '../images/narcos.jpg';
+import mirrorimg from '../images/black_mirror.jpg';
+import blindersimg from '../images/peaky_blinders.jpg';
+import gambitimg from '../images/the_queens_gambit.jpg';
+import lupinimg from '../images/lupin.jpg';
+import vikingsimg from '../images/vikings.jpg';
+import kingdomimg from '../images/the_last_kingdom.jpg';
+
 export const movieData = {
   trending: [
-    { id: 1, title: 'The Crown', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=The+Crown' },
-    { id: 2, title: 'Squid Game', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Squid+Game' },
-    { id: 3, title: 'Money Heist', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Money+Heist' },
-    { id: 4, title: 'Wednesday', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Wednesday' },
-    { id: 5, title: 'The Witcher', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=The+Witcher' },
-    { id: 6, title: 'Bridgerton', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Bridgerton' },
-    { id: 7, title: 'Ozark', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Ozark' },
-    { id: 8, title: 'Dark', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Dark' }
+    { id: 1, title: 'The Crown', image: crownimg },
+    { id: 2, title: 'Squid Game', image: squidimg },
+    { id: 3, title: 'Money Heist', image: moneyimg },
+    { id: 4, title: 'Wednesday', image: wednesdayimg },
+    { id: 5, title: 'The Witcher', image: witcherimg },
+    { id: 6, title: 'Bridgerton', image: bridgertonimg },
+    { id: 7, title: 'Ozark', image: ozarkimg },
+    { id: 8, title: 'Dark', image: darkimg }
   ],
   popular: [
-    { id: 9, title: 'Breaking Bad', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Breaking+Bad' },
-    { id: 10, title: 'Narcos', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Narcos' },
-    { id: 11, title: 'Black Mirror', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Black+Mirror' },
-    { id: 12, title: 'Peaky Blinders', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Peaky+Blinders' },
-    { id: 13, title: 'The Queen\'s Gambit', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Queen+Gambit' },
-    { id: 14, title: 'Lupin', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Lupin' },
-    { id: 15, title: 'Vikings', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Vikings' },
-    { id: 16, title: 'The Last Kingdom', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Last+Kingdom' }
+    { id: 9, title: 'Breaking Bad', image: breakingimg },
+    { id: 10, title: 'Narcos', image: narcosimg },
+    { id: 11, title: 'Black Mirror', image: mirrorimg },
+    { id: 12, title: 'Peaky Blinders', image: blindersimg },
+    { id: 13, title: 'The Queen\'s Gambit', image: gambitimg },
+    { id: 14, title: 'Lupin', image: lupinimg },
+    { id: 15, title: 'Vikings', image: vikingsimg },
+    { id: 16, title: 'The Last Kingdom', image: kingdomimg }
   ],
   action: [
     { id: 17, title: 'Extraction', image: 'https://via.placeholder.com/250x140/e50914/ffffff?text=Extraction' },
