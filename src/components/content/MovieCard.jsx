@@ -6,13 +6,10 @@ const MovieCard = ({ movie, onMovieSelect }) => {
     <div
       className="movie-card"
       onClick={() => onMovieSelect(movie)}
-      style={{ cursor: 'pointer' }}
     >
-      <img 
-        src={movie.image} 
-        alt={movie.title} 
-        style={{ width: '250px', height: '140px', objectFit: 'cover' }} 
-      />
+      <div className="movie-thumb">
+        <img src={movie.image} alt={movie.title} />
+      </div>
       <p>{movie.title}</p>
     </div>
   );
