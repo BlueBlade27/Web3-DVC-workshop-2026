@@ -1,11 +1,12 @@
-import React, {userState} from 'react';
+import React from 'react';
 import './MovieCard.css';
 
 const MovieCard = ({ movie, onMovieSelect }) => {
   return (
     <div
+      className="movie-card"
+      onClick={() => onMovieSelect(movie)}
       style={{ cursor: 'pointer' }}
-      onClick={() => onMovieSelect && onMovieSelect(movie)}
     >
       <img 
         src={movie.image} 

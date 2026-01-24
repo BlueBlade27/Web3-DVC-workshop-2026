@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import userImg from '../../images/user.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
             </svg>
           </button>
           <div className="profile">
-            <img src="https://via.placeholder.com/32x32/e50914/ffffff?text=U" alt="Profile" />
+            <img src={ userImg } alt="Profile" />
             <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
               <path d="M6 9L1.5 3H10.5L6 9Z"/>
             </svg>

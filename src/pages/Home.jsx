@@ -17,11 +17,28 @@ const Home = () => {
       <Hero />
 
       {selectedMovie && (
-        <div>
-          <h2>Selected Movie</h2>
-          <p>{selectedMovie.title}</p>
+        <div className="movie-modal" onClick={() => setSelectedMovie(null)}>
+          <div
+            className="movie-panel"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close-btn" onClick={() => setSelectedMovie(null)}>
+              ✕
+            </button>
+
+            <img
+              src={selectedMovie.image}
+              alt={selectedMovie.title}
+              className="panel-image"
+            />
+
+            <h2>{selectedMovie.title}</h2>
+            <p>"Movie description"</p>
         </div>
-      )}
+      </div>
+
+)}
+
 
       <section>
         <ContentRow
